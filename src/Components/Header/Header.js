@@ -6,7 +6,7 @@ import { UserContext } from '../../Contexts/UserContext';
 
 const Header = () => {
 
-    const {data} = React.useContext(UserContext);
+    const {data, userLogout} = React.useContext(UserContext);
 
     return (
         <header className={styles.header}>
@@ -23,7 +23,6 @@ const Header = () => {
                         Login / Criar
                     </Link>
                 )}
-                
             </nav>
         </header>
     )
