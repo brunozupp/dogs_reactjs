@@ -5,6 +5,7 @@ import LoginCreate from './LoginCreate/LoginCreate'
 import LoginForgetPassword from './LoginForgetPassword/LoginForgetPassword'
 import LoginForm from './LoginForm/LoginForm'
 import LoginResetPassword from './LoginResetPassword/LoginResetPassword'
+import styles from './Login.module.css';
 
 const Login = () => {
 
@@ -15,14 +16,16 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <Routes>
-                <Route path="/" element={<LoginForm />} />
-                <Route path="create" element={<LoginCreate />} />
-                <Route path="forget-password" element={<LoginForgetPassword />} />
-                <Route path="reset-password" element={<LoginResetPassword />} />
-            </Routes>
-        </div>
+        <section className={styles.login}>
+           <div className={styles.forms}>
+                <Routes>
+                    <Route path="/" element={<LoginForm />} />
+                    <Route path="create" element={<LoginCreate />} />
+                    <Route path="forget-password" element={<LoginForgetPassword />} />
+                    <Route path="reset-password" element={<LoginResetPassword />} />
+                </Routes>
+           </div>
+        </section>
     )
 }
 
