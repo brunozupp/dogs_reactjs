@@ -3,6 +3,7 @@
 }
 
 body {
+    padding-top: 4rem; /* Isso daqui é para que os itens vão para baixo e não fica sobrepostos pelo Header. Esse valor de 4rem é a altura do header definido lá no Header.module.css */
     margin: 0px;
     color: #333;
     --type-first: Helvetica, Arial, sans-serif;
@@ -30,6 +31,10 @@ button, input {
     font-size: 1rem;
     font-family: var(--type-first);
     color: #333;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container {
