@@ -1,0 +1,10 @@
+.comments {
+    overflow-y: auto; /* dizendo que pode criar uma barra de scroll */
+    word-break: break-all; /* caso a palavra esteja muito grande vai quebrar ela */
+    padding: 0 2rem;
+}
+
+.comments li {
+    margin-bottom: .5rem;
+    line-height: 1.2rem;
+}
