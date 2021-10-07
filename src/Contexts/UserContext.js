@@ -83,6 +83,8 @@ export const UserStorage = ({children}) => {
                     setLoading(false);
                 }
 
+            } else {
+                setIsLogged(false);
             }
         }
 
