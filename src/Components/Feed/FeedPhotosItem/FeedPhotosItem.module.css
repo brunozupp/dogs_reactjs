@@ -1,0 +1,46 @@
+.photo:nth-child(2) {
+    grid-column: 2 / 4; /* De 4 colunas, esse item vai ocupar 2 colunas*/
+    grid-row: span 2; /* A linha vai expandir duas vezes */
+}
+
+@media (max-width: 40rem) {
+    .photo:nth-child(2) {
+        grid-column: initial;
+        grid-row: initial;
+    }
+}
+
+.photo {
+    display: grid;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.photo img {
+    grid-area: 1/1; /* Está falando que esse e o debaixo é pra ficar na mesma área de grid */
+}
+
+.visualization {
+    grid-area: 1/1;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.visualization::before {
+    content: '';
+    height: 10px;
+    width: 16px;
+    display: inline-block;
+    margin-right: .25rem;
+    background: url('../../../Assets/visualizacao.svg') no-repeat;
+}
+
+.photo:hover .visualization {
+    display: flex;
+}
