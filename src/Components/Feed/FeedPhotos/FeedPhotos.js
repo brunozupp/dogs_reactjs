@@ -6,7 +6,7 @@ import Error from '../../Helper/Error/Error.js'
 import Loading from '../../Loading/Loading'
 import styles from './FeedPhotos.module.css'
 
-const FeedPhotos = () => {
+const FeedPhotos = ({setModalPhoto}) => {
 
     const {data, loading, error, request} = useFetch();
 
@@ -18,7 +18,7 @@ const FeedPhotos = () => {
                 total: 6,
                 user: 0 /* User igual a 0 significa que não vai puxar de um user específico */
             })
-            const {response, json} = await request(url, options);
+            const {json} = await request(url, options);
             console.log(json)
         } 
 
@@ -35,7 +35,7 @@ const FeedPhotos = () => {
     if(data) {
         return (
             <ul className={`${styles.feed} animeLeft`}>
-                {data.map((photo) => <FeedPhotosItem key={photo.id} photo={photo} />)}
+                {data.map((photo) => <FeedPhotosItem key={photo.id} photo={photo} setModalPhoto={setModalPhoto} />)}
             </ul>
         );
     }
