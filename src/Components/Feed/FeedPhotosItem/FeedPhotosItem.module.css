@@ -17,7 +17,8 @@
     cursor: pointer;
 }
 
-.photo img {
+/* > - filho direto */
+.photo > div {
     grid-area: 1/1; /* Está falando que esse e o debaixo é pra ficar na mesma área de grid */
 }
 
