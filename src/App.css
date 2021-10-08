@@ -84,3 +84,14 @@ a {
         transform: initial;
     }
 }
+
+/* Isso daqui para baixo é para fazer com que o footer fique sempre embaixo, mesmo quando está carregando o conteúdo das telas */
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh + 10rem); /* 10rem é o tamanho do footer */
+}
+
+.AppBody {
+    flex:1
+}
